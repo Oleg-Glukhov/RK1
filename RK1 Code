@@ -1,0 +1,164 @@
+#include <iostream>
+#include <ctime>
+#include <cmath>
+#include <string>
+#include <algorithm>
+
+int main()
+{
+    std::string text("QCPUUPCSPDSVAJKTPZQUDADSNQCPEPUQRCPETVJZVSPUUUTVZPDCEZPTZQPFPEDTDEDTDADWYPCKA"
+                             "YPZUQCDUJZPDEUNPPTSNDZDSTPZUVMTPLTQCDEVSKAPCTEVTUVMSVXVZQCDCQADRPIDFPMVZAUVM"
+                             "UVKCEVZTNPUTDTPVMUVAPUWUTPAUKSNDUDCDQZSVCEQTQVCPZVZD"
+                             "SEJXDWPZDXXEDTDQUUTVZPEQCTNPSVAJKTPZDUCKAYPZUQTUPDUW"
+                             "TVMVZRPTTNQUINPCIPZPEPPJQCSSVEPSVCTPAJXDTQCRSVAJXPL"
+                             "DXRVZQTNAUDCEEDTDUTZKSTKZPUTNPSVAJKTPZADCQJKXDTPUTNPEDTD"
+                             "YWJPZMVZAQCRVJPZDTQVCUVCTNPCKAYPZUEQUJXDWQCRDCQADRPVCD"
+                             "USZPPCQUDSSVAJXQUNPEYWAVFQCRDCDZZDWVMCKAYPZUTVTNPFQEPV"
+                             "APAVZWPDSNCKAYPZZPJZPUPCTQCRDJQLPXVMSVXVZTVJXDWDCAJ"
+                             "DKEQVMQXPTNPSVAJKTPZZPDEUDCDZZDWVMCKAYPZUMZVAEQUGDCE"
+                             "QCTVAPAVZWADCQJKXDTPUTNVUPCKAYPZUTVSVCFPZTTNPSVAJZPUUPE"
+                             "DKEQVEDTDQCTVZDIDKEQVEDTDDCETNPCVKTJKTUTNPCPIUPTVM"
+                             "CKAYPZUTNPZDIDKEQVEDTDTVTNPDKEQVSNQJPFPZWTNQCRTNDTD"
+                             "SVAJKTPZEVPUMZVAIPYYZVIUQCRTVJZQCTQCRQCFVXFPUAVFQCRDCE"
+                             "JZVSPUUQCRCKAYPZUTNPPXPSTZVCQSUVMDSVAJKTPZQUCVTNQCRAVZP"
+                             "TNDCDUWUTPAEPUQRCPETVNVXEAVFPDCESNDCRPCKAYPZUDSVAJKTPZ"
+                             "UWUTPAQUSVAJVUPEVMADCWJDZTUYVTNNDZEIDZPDCEUVMTIDZPDT"
+                             "TNPNPDZTVMTNPSVAJKTPZQUTNPJZVSPUUVZTNPNDZEIDZPTNDT"
+                             "PLPSKTPUTNPSVAJKTPZJZVRZDAUTNPSVAJKTPZDXUVNDUAPAVZWVMTPC"
+                             "UPFPZDXEQMMPZPCTTWJPUQCVCPUWUTPATNPAPAVZWQUKUPETVUTVZP"
+                             "JZVRZDAUINQXPTNPJZVSPUUVZQUZKCCQCRTNPADUIPXXDUUTVZPTNP"
+                             "EDTDTNDTTNPJZVRZDAUDZPADCQJKXDTQCRTNPSVAJKTPZDXUVNDU"
+                             "EPFQSPUMVZUTVZQCREDTDVZPLSNDCRQCREDTDIQTNTNPVKTUQEPIVZXE"
+                             "TNPUPADWDXXVITNPQCJKTVMTPLTFQDDGPWYVDZETNPEQUJXDWVM"
+                             "QCMVZADTQVCVCDUSZPPCVZTNPAVFPAPCTVMJZVRZDAUDCEEDTDTVVZ"
+                             "MZVADEQUGEZQFP");
+    std::cout << "E: " << static_cast<float>(std::count(text.begin(), text.end(), 'E')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "T: " << static_cast<float>(std::count(text.begin(), text.end(), 'T')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "A: " << static_cast<float>(std::count(text.begin(), text.end(), 'A')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "O: " << static_cast<float>(std::count(text.begin(), text.end(), 'O')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "I: " << static_cast<float>(std::count(text.begin(), text.end(), 'I')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "N: " << static_cast<float>(std::count(text.begin(), text.end(), 'N')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "S: " << static_cast<float>(std::count(text.begin(), text.end(), 'S')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "H: " << static_cast<float>(std::count(text.begin(), text.end(), 'H')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "R: " << static_cast<float>(std::count(text.begin(), text.end(), 'R')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "D: " << static_cast<float>(std::count(text.begin(), text.end(), 'D')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "L: " << static_cast<float>(std::count(text.begin(), text.end(), 'L')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "C: " << static_cast<float>(std::count(text.begin(), text.end(), 'C')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "U: " << static_cast<float>(std::count(text.begin(), text.end(), 'U')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "M: " << static_cast<float>(std::count(text.begin(), text.end(), 'M')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "W: " << static_cast<float>(std::count(text.begin(), text.end(), 'W')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "F: " << static_cast<float>(std::count(text.begin(), text.end(), 'F')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "G: " << static_cast<float>(std::count(text.begin(), text.end(), 'G')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "Y: " << static_cast<float>(std::count(text.begin(), text.end(), 'Y')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "P: " << static_cast<float>(std::count(text.begin(), text.end(), 'P')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "B: " << static_cast<float>(std::count(text.begin(), text.end(), 'B')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "V: " << static_cast<float>(std::count(text.begin(), text.end(), 'V')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "K: " << static_cast<float>(std::count(text.begin(), text.end(), 'K')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "J: " << static_cast<float>(std::count(text.begin(), text.end(), 'J')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "X: " << static_cast<float>(std::count(text.begin(), text.end(), 'X')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "Q: " << static_cast<float>(std::count(text.begin(), text.end(), 'Q')) / (text.size() - 1) * 100 << std::endl;
+    std::cout << "Z: " << static_cast<float>(std::count(text.begin(), text.end(), 'Z')) / (text.size() - 1) * 100 << std::endl;
+
+    std::string textnew("QC PUUPCSP, D SVAJKTPZ QU D ADSNQCP EPUQRCPE TV JZVSPUU, UTVZP,\n"
+                                "DCE ZPTZQPFP EDTD. EDTD ADW YP CKAYPZU QC D UJZPDEUNPPT, SNDZDSTPZU\n"
+                                "VM TPLT QC D EVSKAPCT, EVTU VM SVXVZ QC DC QADRP, IDFPMVZAU VM\n"
+                                "UVKCE, VZ TNP UTDTP VM UVAP UWUTPA, UKSN DU DC DQZ SVCEQTQVCPZ VZ D\n"
+                                "SE JXDWPZ. DXX EDTD QU UTVZPE QC TNP SVAJKTPZ DU CKAYPZU. QT’U PDUW\n"
+                                "TV MVZRPT TNQU INPC IP’ZP EPPJ QC S SVEP, SVCTPAJXDTQCR SVAJXPL\n"
+                                "DXRVZQTNAU DCE EDTD UTZKSTKZPU. TNP SVAJKTPZ ADCQJKXDTPU TNP EDTD\n"
+                                "YW JPZMVZAQCR VJPZDTQVCU VC TNP CKAYPZU. EQUJXDWQCR DC QADRP VC D\n"
+                                "USZPPC QU DSSVAJXQUNPE YW AVFQCR DC DZZDW VM CKAYPZU TV TNP FQEPV\n"
+                                "APAVZW, PDSN CKAYPZ ZPJZPUPCTQCR D JQLPX VM SVXVZ. TV JXDW DC AJ3\n"
+                                "DKEQV MQXP, TNP SVAJKTPZ ZPDEU DC DZZDW VM CKAYPZU MZVA EQUG DCE\n"
+                                "QCTV APAVZW, ADCQJKXDTPU TNVUP CKAYPZU TV SVCFPZT TNP SVAJZPUUPE\n"
+                                "DKEQV EDTD QCTV ZDI DKEQV EDTD, DCE TNPC VKTJKTU TNP CPI UPT VM\n"
+                                "CKAYPZU (TNP ZDI DKEQV EDTD) TV TNP DKEQV SNQJ. PFPZWTNQCR TNDT D\n"
+                                "SVAJKTPZ EVPU, MZVA IPY YZVIUQCR TV JZQCTQCR, QCFVXFPU AVFQCR DCE\n"
+                                "JZVSPUUQCR CKAYPZU. TNP PXPSTZVCQSU VM D SVAJKTPZ QU CVTNQCR AVZP\n"
+                                "TNDC D UWUTPA EPUQRCPE TV NVXE, AVFP, DCE SNDCRP CKAYPZU. D SVAJKTPZ\n"
+                                "UWUTPA QU SVAJVUPE VM ADCW JDZTU, YVTN NDZEIDZP DCE UVMTIDZP. DT\n"
+                                "TNP NPDZT VM TNP SVAJKTPZ QU TNP JZVSPUUVZ, TNP NDZEIDZP TNDT\n"
+                                "PLPSKTPU TNP SVAJKTPZ JZVRZDAU. TNP SVAJKTPZ DXUV NDU APAVZW, VMTPC\n"
+                                "UPFPZDX EQMMPZPCT TWJPU QC VCP UWUTPA. TNP APAVZW QU KUPE TV UTVZP\n"
+                                "JZVRZDAU INQXP TNP JZVSPUUVZ QU ZKCCQCR TNPA, DU IPXX DU UTVZP TNP\n"
+                                "EDTD TNDT TNP JZVRZDAU DZP ADCQJKXDTQCR. TNP SVAJKTPZ DXUV NDU\n"
+                                "EPFQSPU MVZ UTVZQCR EDTD, VZ PLSNDCRQCR EDTD IQTN TNP VKTUQEP IVZXE.\n"
+                                "TNPUP ADW DXXVI TNP QCJKT VM TPLT FQD D GPWYVDZE, TNP EQUJXDW VM\n"
+                                "QCMVZADTQVC VC D USZPPC, VZ TNP AVFPAPCT VM JZVRZDAU DCE EDTD TV VZ\n"
+                                "MZVA D EQUG EZQFP.");
+
+    int i;
+    for (i = 0; i < textnew.size(); i++)
+        switch (textnew[i])
+        {
+            case 'A':
+                textnew.replace(i, 1, 1, 'M');
+                break;
+            case 'C':
+                textnew.replace(i, 1, 1, 'N');
+                break;
+            case 'D':
+                textnew.replace(i, 1, 1, 'A');
+                break;
+            case 'E':
+                textnew.replace(i, 1, 1, 'D');
+                break;
+            case 'F':
+                textnew.replace(i, 1, 1, 'V');
+                break;
+            case 'G':
+                textnew.replace(i, 1, 1, 'K');
+                break;
+            case 'I':
+                textnew.replace(i, 1, 1, 'W');
+                break;
+            case 'J':
+                textnew.replace(i, 1, 1, 'P');
+                break;
+            case 'K':
+                textnew.replace(i, 1, 1, 'U');
+                break;
+            case 'L':
+                textnew.replace(i, 1, 1, 'X');
+                break;
+            case 'M':
+                textnew.replace(i, 1, 1, 'F');
+                break;
+            case 'N':
+                textnew.replace(i, 1, 1, 'H');
+                break;
+            case 'P':
+                textnew.replace(i, 1, 1, 'E');
+                break;
+            case 'Q':
+                textnew.replace(i, 1, 1, 'I');
+                break;
+            case 'R':
+                textnew.replace(i, 1, 1, 'G');
+                break;
+            case 'S':
+                textnew.replace(i, 1, 1, 'C');
+                break;
+            case 'U':
+                textnew.replace(i, 1, 1, 'S');
+                break;
+            case 'V':
+                textnew.replace(i, 1, 1, 'O');
+                break;
+            case 'W':
+                textnew.replace(i, 1, 1, 'Y');
+                break;
+            case 'X':
+                textnew.replace(i, 1, 1, 'L');
+                break;
+            case 'Y':
+                textnew.replace(i, 1, 1, 'B');
+                break;
+            case 'Z':
+                textnew.replace(i, 1, 1, 'R');
+                break;
+        }
+    std::cout << textnew;
+
+    return 0;
+}
